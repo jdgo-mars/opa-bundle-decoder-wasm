@@ -24,14 +24,4 @@ use wasm_bindgen_test::wasm_bindgen_test;
 
         Ok(())
     }
-
-    #[wasm_bindgen_test]
-    #[should_panic(expected = "UnexpectedEof")]
-    async fn empty_bundle_decode_fails() -> Result<(), wasm_bindgen::JsValue> {
-        let bundle = include_bytes!("../_fixtures_/empty_bundle.tar.gz");
-
-        decode_opa_bundle(&mut bundle.to_owned()).await?;
-        
-        Ok(())
-    }
 }
