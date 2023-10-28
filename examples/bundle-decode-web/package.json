@@ -1,0 +1,16 @@
+{
+  "name": "bundle-decode-web",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "../../build.sh",
+    "start": "npm run build && npm i && vite"
+  },
+  "devDependencies": {
+    "vite": "^4.4.5"
+  },
+  "dependencies": {
+    "opa-bundle-decoder-wasm": "../../pkg"
+  }
+}

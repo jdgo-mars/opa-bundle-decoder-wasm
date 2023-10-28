@@ -1,0 +1,30 @@
+[package]
+name = "opa-bundle-decoder-wasm"
+version = "0.1.0"
+authors = ["Joao Martins <jd.martins@protonmail.com>"]
+edition = "2018"
+description = ""
+repository = "github.com/sqrt-13/opa-bundle-decoder-wasm"
+license = "MIT"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[features]
+default = ["console_error_panic_hook"]
+
+[dependencies]
+wasm-bindgen = "0.2"
+flate2 = "1.0"
+tar ="0.4"
+serde = { version = "1", features = ["derive"]}
+serde-wasm-bindgen = "0.6.1"
+web-sys = "0.3"
+wasm-bindgen-futures = "0.4.37"
+console_error_panic_hook = { version = "0.1.7", optional = true }
+
+[dev-dependencies]
+wasm-bindgen-test = "0.3"
+
+[profile.release]
+lto = true

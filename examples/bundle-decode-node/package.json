@@ -1,0 +1,17 @@
+{
+    "name": "bundle-decode-node",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "build": "../../build.sh",
+      "start": "npm run build && npm i && node index.js"
+    },
+    "author": "",
+    "license": "MIT",
+    "dependencies": {
+        "opa-bundle-decoder-wasm": "../../pkg"
+    }
+  
+  }
+  
