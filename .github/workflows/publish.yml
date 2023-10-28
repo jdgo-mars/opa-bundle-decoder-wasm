@@ -1,0 +1,19 @@
+name: Publish Package
+on:
+  push:
+    tags:
+    - '*'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    environment: ci
+    steps:
+    - uses: actions/checkout@v4
+    - uses: jetli/wasm-pack-action@v0.4.0
+      with:
+        version: 'latest'
+    - run: ./build.sh
+    - run: wasm-pack pack
+    - run: wasm-pack publish --tag ${{github.ref_name}}
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
