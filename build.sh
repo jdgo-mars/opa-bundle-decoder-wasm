@@ -31,8 +31,8 @@ rm -rf $PKG_DIR/node $PKG_DIR/web
 
 # Merge nodejs & browser packages
 mkdir $PKG_DIR/node $PKG_DIR/web
-mv $PKG_DIR/opa_bundle_decode_wasm* $PKG_DIR/web
-mv $PKG_DIR_NODE/opa_bundle_decode_wasm* $PKG_DIR/node
+mv $PKG_DIR/$PKG_NAME* $PKG_DIR/web
+mv $PKG_DIR_NODE/$PKG_NAME* $PKG_DIR/node
 
 # Add node, web folders to files
 jq ".files = [\"node\", \"web\"]" $PKG_DIR/package.json \
