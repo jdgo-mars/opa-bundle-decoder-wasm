@@ -31,8 +31,7 @@ jobs:
     - name: Test for ${{ matrix.node-version }}
       run: wasm-pack test --node
     - name: Build for ${{ matrix.node-version }}
-      working-directory: ${{ github.workspace }}
-      run: ./build.sh
+      run: bash ${GITHUB_WORKSPACE}/build.sh
     
 
 
