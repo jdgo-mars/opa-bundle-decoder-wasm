@@ -16,7 +16,8 @@ jobs:
     - run: wasm-pack pack
     - uses: actions/setup-node@v3
       with:
-        node-version: "lts/*"
+        node-version: 'lts/*'
+        registry-url: 'https://registry.npmjs.org'
     - run: |
         cd ${GITHUB_WORKSPACE}/pkg
         npm publish
