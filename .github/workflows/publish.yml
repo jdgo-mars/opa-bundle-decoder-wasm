@@ -14,6 +14,6 @@ jobs:
         version: 'latest'
     - run: ./build.sh
     - run: wasm-pack pack
-    - run: wasm-pack publish --tag ${{github.ref_name}}
+    - run: wasm-pack publish --tag latest
       env:
         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
