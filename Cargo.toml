@@ -1,10 +1,10 @@
 [package]
 name = "opa-bundle-decoder-wasm"
-version = "0.1.0"
-authors = ["Joao Martins <jd.martins@protonmail.com>"]
+version = "0.1.4"
+authors = ["Joao Martins <willful-upriver.0j@icloud.com>"]
 edition = "2018"
-description = ""
-repository = "github.com/sqrt-13/opa-bundle-decoder-wasm"
+description = "Library to decode wasm opa bundles"
+repository = "github.com/jdgo-mars/opa-bundle-decoder-wasm"
 license = "MIT"
 
 [lib]
